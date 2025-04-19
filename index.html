@@ -1918,14 +1918,48 @@
         const nextBtn = document.querySelector(".next-step");
         const prevBtn = document.querySelector(".prev-step");
         const submitBtn = document.querySelector(".submit-form");
+        const form = document.querySelector(".pat_form");
         const stepCount = document.querySelector(".step_count");
         const stepIndicators = document.querySelectorAll(".steps .step");
 
         let currentStep = 0;
 
+        // Function for Validation
+        function validateStep(stepIndex) {
+          const currentGroup = steps[stepIndex];
+          const questions = currentGroup.querySelectorAll(".question-block");
+          let isValid = true;
+
+          questions.forEach((block) => {
+            const radios = block.querySelectorAll("input[type='radio']");
+            const name = radios[0]?.name;
+            const checked = currentGroup.querySelector(
+              `input[name='${name}']:checked`
+            );
+            if (!checked) {
+              isValid = false;
+              block.classList.add("border", "border-red-500", "rounded-md");
+            } else {
+              block.classList.remove("border", "border-red-500", "rounded-md");
+            }
+          });
+
+          return isValid;
+        }
+
+        // Function to Scroll to Top on next step
+        function scrollToTop() {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        // Function to show Next Step
         function showStep() {
           steps.forEach((step, index) => {
             step.classList.toggle("hidden", index !== currentStep);
+            if (index === currentStep) {
+              step.classList.add("fade-in");
+              setTimeout(() => step.classList.remove("fade-in"), 300);
+            }
           });
           asides.forEach((aside, index) => {
             aside.classList.toggle("hidden", index !== currentStep);
@@ -1945,15 +1979,19 @@
             "hidden",
             currentStep !== steps.length - 1
           );
+
+          scrollToTop();
         }
 
+        // Next Button Trigger
         nextBtn.addEventListener("click", () => {
-          if (currentStep < steps.length - 1) {
+          if (currentStep < steps.length - 1 && validateStep(currentStep)) {
             currentStep++;
             showStep();
           }
         });
 
+        // Previous Button Trigger
         prevBtn.addEventListener("click", () => {
           if (currentStep > 0) {
             currentStep--;
@@ -1961,50 +1999,58 @@
           }
         });
 
+        // Form Submit Logic
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          if (!validateStep(currentStep)) {
+            scrollToTop();
+            return;
+          }
+
+          const results = [];
+
+          document.querySelectorAll(".question-block").forEach((block) => {
+            const questionId = block.getAttribute("data-question");
+            const questionLabel = block.querySelector(".pat_label");
+            let questionText = questionLabel
+              ? questionLabel.cloneNode(true)
+              : null;
+
+            // Remove tooltip and line breaks
+            if (questionText) {
+              // Remove tooltip span
+              const tooltip = questionText.querySelector(".group");
+              if (tooltip) tooltip.remove();
+
+              // Get clean text
+              questionText = questionText.innerText.replace(/\s+/g, " ").trim();
+            }
+
+            const selectedRatingInput = block.querySelector(
+              'input[type="radio"]:checked'
+            );
+            const rating = selectedRatingInput
+              ? selectedRatingInput.value
+              : null;
+
+            const commentInput = block.querySelector(".pat_input");
+            const comment = commentInput ? commentInput.value.trim() : "";
+
+            results.push({
+              question: questionId,
+              questionText: questionText || "",
+              rating,
+              comment,
+            });
+          });
+
+          console.log("Captured Data:", results);
+          localStorage.setItem("patFormResponses", JSON.stringify(results));
+        });
+
         // Initial render
         showStep(currentStep);
       });
-    </script>
-
-    <!-- Submit Logic -->
-    <script>
-      function getFormData() {
-        const results = [];
-
-        document.querySelectorAll(".question-block").forEach((block) => {
-          const questionId = block.getAttribute("data-question");
-
-          const selectedRatingInput = block.querySelector(
-            'input[type="radio"]:checked'
-          );
-          const rating = selectedRatingInput ? selectedRatingInput.value : null;
-
-          const commentInput = block.querySelector(".pat_input");
-          const comment = commentInput ? commentInput.value.trim() : "";
-
-          results.push({
-            question: questionId,
-            rating,
-            comment,
-          });
-        });
-
-        return results;
-      }
-
-      // Example: capture on form submit
-      document
-        .querySelector(".pat_form")
-        .addEventListener("submit", function (e) {
-          e.preventDefault(); // Prevent actual form submission
-          const formData = getFormData();
-          console.log("Captured Data:", formData);
-
-          // Now you can:
-          // - Send it via AJAX
-          // - Store it locally
-          // - Show a summary to the user
-        });
     </script>
   </body>
 </html>

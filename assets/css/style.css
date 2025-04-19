@@ -160,3 +160,19 @@ h2 {
 .pat_form .rate label:hover ~ label {
   background-color: #c3d8f0;
 }
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
