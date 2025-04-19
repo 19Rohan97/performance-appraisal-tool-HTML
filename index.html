@@ -50,7 +50,7 @@
 
     <main class="w-full h-full min-h-[calc(100vh-61.67px)] relative">
       <aside
-        class="py-10 px-9 w-full h-full max-w-[439px] bg-[url('./assets/images/CPP.png')] bg-cover bg-position-[25%_top] absolute top-0 left-0 before:content-[''] before:bg-linear-[182.3deg,#00000075_6%,#00000000_94%] before:w-full before:h-full before:absolute before:top-0 before:left-0"
+        class="first_step_aside py-10 px-9 w-full h-full max-w-[439px] bg-[url('./assets/images/CPP.webp')] bg-cover bg-position-[37%_top] absolute top-0 left-0 before:content-[''] before:bg-linear-[182.3deg,#00000075_6%,#00000000_94%] before:w-full before:h-full before:absolute before:top-0 before:left-0"
       >
         <h2 class="mb-5 relative text-white">
           Commitment to Professional Practice
@@ -61,10 +61,34 @@
           dedication to continuous improvement in their role.
         </p>
       </aside>
+      <aside
+        class="second_step_aside hidden py-10 px-9 w-full h-full max-w-[439px] bg-[url('./assets/images/CPB.webp')] bg-cover bg-position-[50%_top] absolute top-0 left-0 before:content-[''] before:bg-linear-[182.3deg,#00000075_6%,#00000000_94%] before:w-full before:h-full before:absolute before:top-0 before:left-0"
+      >
+        <h2 class="mb-5 relative text-white">
+          Commitment to Professional Behaviour
+        </h2>
+        <p class="relative text-white">
+          This section evaluates the staff member&apos;s conduct, ethics, and
+          interpersonal interactions in alignment with the school&apos;s values
+          and professional expectations
+        </p>
+      </aside>
+      <aside
+        class="third_step_aside hidden py-10 px-9 w-full h-full max-w-[439px] bg-[url('./assets/images/CM.webp')] bg-cover bg-position-[37%_top] absolute top-0 left-0 before:content-[''] before:bg-linear-[182.3deg,#00000075_6%,#00000000_94%] before:w-full before:h-full before:absolute before:top-0 before:left-0"
+      >
+        <h2 class="mb-5 relative text-white">Commitment to Mission</h2>
+        <p class="relative text-white">
+          At Adventist schools, staff members play a crucial role in nurturing a
+          Christ-centered learning environment. This section evaluates how
+          effectively staff integrate biblical principles into their
+          professional responsibilities, inspire spiritual growth in students,
+          and contribute to the mission of the school
+        </p>
+      </aside>
       <section
         class="flex-1 py-10 px-[100px] bg-light w-full max-w-[calc(100%-439px)] ms-auto h-full min-h-[calc(100vh-61.67px)]"
       >
-        <form class="pat_form">
+        <form class="pat_form flex flex-col gap-[60px]">
           <div class="steps">
             <span class="step_count font-bold text-xl">2 of 3</span>
             <span class="step step_1 completed"></span>
@@ -72,93 +96,1915 @@
             <span class="step step_3"></span>
           </div>
 
-          <div class="form-group">
-            <div class="pat_label leading-relaxed text-sm">
-              1. [Staff Name] demonstrates integrity, fairness, and
-              professionalism in all leadership responsibilities.
-              <span class="relative inline-block align-text-bottom group">
-                <img
-                  src="assets/icons/info.svg"
-                  alt="Info"
-                  class="inline w-4 h-4 cursor-pointer"
-                />
-                <div
-                  class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center"
-                >
-                  <span
-                    class="relative z-10 p-2 text-xs leading-none text-white whitespace-nowrap bg-black shadow-lg"
+          <div class="first_step flex flex-col gap-12">
+            <div class="form-group question-block" data-question="1.1">
+              <div class="pat_label leading-relaxed text-sm">
+                1. [Staff Name] demonstrates integrity, fairness, and
+                professionalism in all leadership responsibilities.
+                <span class="relative inline-block align-text-bottom group">
+                  <img
+                    src="assets/icons/info.svg"
+                    alt="Info"
+                    class="inline w-4 h-4 cursor-pointer"
+                  />
+                  <div
+                    class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center"
                   >
-                    A top aligned tooltip.
-                  </span>
-                  <div class="w-3 h-3 rotate-45 bg-black -mt-2"></div>
+                    <span
+                      class="relative z-10 p-2 text-xs leading-none text-white whitespace-nowrap bg-black shadow-lg"
+                    >
+                      A top aligned tooltip.
+                    </span>
+                    <div class="w-3 h-3 rotate-45 bg-black -mt-2"></div>
+                  </div>
+                </span>
+              </div>
+
+              <div class="rate-wrapper">
+                <div class="progress-line">
+                  <div class="progress-fill"></div>
                 </div>
-              </span>
+                <div class="rate">
+                  <input
+                    type="radio"
+                    id="s1_q1_star10"
+                    name="s1_q1_rating"
+                    value="10"
+                  />
+                  <label for="s1_q1_star10" data-value="10"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q1_star9"
+                    name="s1_q1_rating"
+                    value="9"
+                  />
+                  <label for="s1_q1_star9" data-value="9"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q1_star8"
+                    name="s1_q1_rating"
+                    value="8"
+                  />
+                  <label for="s1_q1_star8" data-value="8"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q1_star7"
+                    name="s1_q1_rating"
+                    value="7"
+                  />
+                  <label for="s1_q1_star7" data-value="7"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q1_star6"
+                    name="s1_q1_rating"
+                    value="6"
+                  />
+                  <label for="s1_q1_star6" data-value="6"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q1_star5"
+                    name="s1_q1_rating"
+                    value="5"
+                  />
+                  <label for="s1_q1_star5" data-value="5"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q1_star4"
+                    name="s1_q1_rating"
+                    value="4"
+                  />
+                  <label for="s1_q1_star4" data-value="4"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q1_star3"
+                    name="s1_q1_rating"
+                    value="3"
+                  />
+                  <label for="s1_q1_star3" data-value="3"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q1_star2"
+                    name="s1_q1_rating"
+                    value="2"
+                  />
+                  <label for="s1_q1_star2" data-value="2"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q1_star1"
+                    name="s1_q1_rating"
+                    value="1"
+                  />
+                  <label for="s1_q1_star1" data-value="1"></label>
+                </div>
+              </div>
+
+              <input
+                type="text"
+                class="pat_input"
+                placeholder="Optional Comment..."
+              />
             </div>
 
-            <div class="rate-wrapper">
-              <div class="progress-line">
-                <div class="progress-fill"></div>
+            <div class="form-group question-block" data-question="1.2">
+              <div class="pat_label leading-relaxed text-sm">
+                2. [Staff Name]&apos;s scope and sequence, programs and
+                assessment schedule are up to date and compliant with the
+                current NESA Syllabus.
+                <span class="relative inline-block align-text-bottom group">
+                  <img
+                    src="assets/icons/info.svg"
+                    alt="Info"
+                    class="inline w-4 h-4 cursor-pointer"
+                  />
+                  <div
+                    class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center"
+                  >
+                    <span
+                      class="relative z-10 p-2 text-xs leading-none text-white whitespace-nowrap bg-black shadow-lg"
+                    >
+                      A top aligned tooltip.
+                    </span>
+                    <div class="w-3 h-3 rotate-45 bg-black -mt-2"></div>
+                  </div>
+                </span>
               </div>
-              <div class="rate">
-                <input type="radio" id="star10" name="rating" value="10" />
-                <label for="star10" data-value="10"></label>
 
-                <input type="radio" id="star9" name="rating" value="9" />
-                <label for="star9" data-value="9"></label>
+              <div class="rate-wrapper">
+                <div class="progress-line">
+                  <div class="progress-fill"></div>
+                </div>
+                <div class="rate">
+                  <input
+                    type="radio"
+                    id="s1_q2_star10"
+                    name="s1_q2_rating"
+                    value="10"
+                  />
+                  <label for="s1_q2_star10" data-value="10"></label>
 
-                <input type="radio" id="star8" name="rating" value="8" />
-                <label for="star8" data-value="8"></label>
+                  <input
+                    type="radio"
+                    id="s1_q2_star9"
+                    name="s1_q2_rating"
+                    value="9"
+                  />
+                  <label for="s1_q2_star9" data-value="9"></label>
 
-                <input type="radio" id="star7" name="rating" value="7" />
-                <label for="star7" data-value="7"></label>
+                  <input
+                    type="radio"
+                    id="s1_q2_star8"
+                    name="s1_q2_rating"
+                    value="8"
+                  />
+                  <label for="s1_q2_star8" data-value="8"></label>
 
-                <input type="radio" id="star6" name="rating" value="6" />
-                <label for="star6" data-value="6"></label>
+                  <input
+                    type="radio"
+                    id="s1_q2_star7"
+                    name="s1_q2_rating"
+                    value="7"
+                  />
+                  <label for="s1_q2_star7" data-value="7"></label>
 
-                <input type="radio" id="star5" name="rating" value="5" />
-                <label for="star5" data-value="5"></label>
+                  <input
+                    type="radio"
+                    id="s1_q2_star6"
+                    name="s1_q2_rating"
+                    value="6"
+                  />
+                  <label for="s1_q2_star6" data-value="6"></label>
 
-                <input type="radio" id="star4" name="rating" value="4" />
-                <label for="star4" data-value="4"></label>
+                  <input
+                    type="radio"
+                    id="s1_q2_star5"
+                    name="s1_q2_rating"
+                    value="5"
+                  />
+                  <label for="s1_q2_star5" data-value="5"></label>
 
-                <input type="radio" id="star3" name="rating" value="3" />
-                <label for="star3" data-value="3"></label>
+                  <input
+                    type="radio"
+                    id="s1_q2_star4"
+                    name="s1_q2_rating"
+                    value="4"
+                  />
+                  <label for="s1_q2_star4" data-value="4"></label>
 
-                <input type="radio" id="star2" name="rating" value="2" />
-                <label for="star2" data-value="2"></label>
+                  <input
+                    type="radio"
+                    id="s1_q2_star3"
+                    name="s1_q2_rating"
+                    value="3"
+                  />
+                  <label for="s1_q2_star3" data-value="3"></label>
 
-                <input type="radio" id="star1" name="rating" value="1" />
-                <label for="star1" data-value="1"></label>
+                  <input
+                    type="radio"
+                    id="s1_q2_star2"
+                    name="s1_q2_rating"
+                    value="2"
+                  />
+                  <label for="s1_q2_star2" data-value="2"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q2_star1"
+                    name="s1_q2_rating"
+                    value="1"
+                  />
+                  <label for="s1_q2_star1" data-value="1"></label>
+                </div>
               </div>
+
+              <input
+                type="text"
+                class="pat_input"
+                placeholder="Optional Comment..."
+              />
             </div>
 
-            <input
-              type="text"
-              class="pat_input"
-              placeholder="Optional Comment..."
-            />
+            <div class="form-group question-block" data-question="1.3">
+              <div class="pat_label leading-relaxed text-sm">
+                3. [Staff Name] is always able to meet important professional
+                deadlines (Programs, Reports, Work registers etc).
+                <span class="relative inline-block align-text-bottom group">
+                  <img
+                    src="assets/icons/info.svg"
+                    alt="Info"
+                    class="inline w-4 h-4 cursor-pointer"
+                  />
+                  <div
+                    class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center"
+                  >
+                    <span
+                      class="relative z-10 p-2 text-xs leading-none text-white whitespace-nowrap bg-black shadow-lg"
+                    >
+                      A top aligned tooltip.
+                    </span>
+                    <div class="w-3 h-3 rotate-45 bg-black -mt-2"></div>
+                  </div>
+                </span>
+              </div>
+
+              <div class="rate-wrapper">
+                <div class="progress-line">
+                  <div class="progress-fill"></div>
+                </div>
+                <div class="rate">
+                  <input
+                    type="radio"
+                    id="s1_q3_star10"
+                    name="s1_q3_rating"
+                    value="10"
+                  />
+                  <label for="s1_q3_star10" data-value="10"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q3_star9"
+                    name="s1_q3_rating"
+                    value="9"
+                  />
+                  <label for="s1_q3_star9" data-value="9"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q3_star8"
+                    name="s1_q3_rating"
+                    value="8"
+                  />
+                  <label for="s1_q3_star8" data-value="8"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q3_star7"
+                    name="s1_q3_rating"
+                    value="7"
+                  />
+                  <label for="s1_q3_star7" data-value="7"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q3_star6"
+                    name="s1_q3_rating"
+                    value="6"
+                  />
+                  <label for="s1_q3_star6" data-value="6"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q3_star5"
+                    name="s1_q3_rating"
+                    value="5"
+                  />
+                  <label for="s1_q3_star5" data-value="5"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q3_star4"
+                    name="s1_q3_rating"
+                    value="4"
+                  />
+                  <label for="s1_q3_star4" data-value="4"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q3_star3"
+                    name="s1_q3_rating"
+                    value="3"
+                  />
+                  <label for="s1_q3_star3" data-value="3"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q3_star2"
+                    name="s1_q3_rating"
+                    value="2"
+                  />
+                  <label for="s1_q3_star2" data-value="2"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q3_star1"
+                    name="s1_q3_rating"
+                    value="1"
+                  />
+                  <label for="s1_q3_star1" data-value="1"></label>
+                </div>
+              </div>
+
+              <input
+                type="text"
+                class="pat_input"
+                placeholder="Optional Comment..."
+              />
+            </div>
+
+            <div class="form-group question-block" data-question="1.4">
+              <div class="pat_label leading-relaxed text-sm">
+                4. [Staff Name] has evidence uploaded in the relevant online
+                space to demonstrate that their programs reflect practice.
+                <span class="relative inline-block align-text-bottom group">
+                  <img
+                    src="assets/icons/info.svg"
+                    alt="Info"
+                    class="inline w-4 h-4 cursor-pointer"
+                  />
+                  <div
+                    class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center"
+                  >
+                    <span
+                      class="relative z-10 p-2 text-xs leading-none text-white whitespace-nowrap bg-black shadow-lg"
+                    >
+                      A top aligned tooltip.
+                    </span>
+                    <div class="w-3 h-3 rotate-45 bg-black -mt-2"></div>
+                  </div>
+                </span>
+              </div>
+
+              <div class="rate-wrapper">
+                <div class="progress-line">
+                  <div class="progress-fill"></div>
+                </div>
+                <div class="rate">
+                  <input
+                    type="radio"
+                    id="s1_q4_star10"
+                    name="s1_q4_rating"
+                    value="10"
+                  />
+                  <label for="s1_q4_star10" data-value="10"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q4_star9"
+                    name="s1_q4_rating"
+                    value="9"
+                  />
+                  <label for="s1_q4_star9" data-value="9"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q4_star8"
+                    name="s1_q4_rating"
+                    value="8"
+                  />
+                  <label for="s1_q4_star8" data-value="8"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q4_star7"
+                    name="s1_q4_rating"
+                    value="7"
+                  />
+                  <label for="s1_q4_star7" data-value="7"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q4_star6"
+                    name="s1_q4_rating"
+                    value="6"
+                  />
+                  <label for="s1_q4_star6" data-value="6"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q4_star5"
+                    name="s1_q4_rating"
+                    value="5"
+                  />
+                  <label for="s1_q4_star5" data-value="5"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q4_star4"
+                    name="s1_q4_rating"
+                    value="4"
+                  />
+                  <label for="s1_q4_star4" data-value="4"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q4_star3"
+                    name="s1_q4_rating"
+                    value="3"
+                  />
+                  <label for="s1_q4_star3" data-value="3"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q4_star2"
+                    name="s1_q4_rating"
+                    value="2"
+                  />
+                  <label for="s1_q4_star2" data-value="2"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q4_star1"
+                    name="s1_q4_rating"
+                    value="1"
+                  />
+                  <label for="s1_q4_star1" data-value="1"></label>
+                </div>
+              </div>
+
+              <input
+                type="text"
+                class="pat_input"
+                placeholder="Optional Comment..."
+              />
+            </div>
+
+            <div class="form-group question-block" data-question="1.5">
+              <div class="pat_label leading-relaxed text-sm">
+                5. [Staff Name] takes care when writing reports to ensure that
+                parents receive specific feedback with a gracious delivery.
+                <span class="relative inline-block align-text-bottom group">
+                  <img
+                    src="assets/icons/info.svg"
+                    alt="Info"
+                    class="inline w-4 h-4 cursor-pointer"
+                  />
+                  <div
+                    class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center"
+                  >
+                    <span
+                      class="relative z-10 p-2 text-xs leading-none text-white whitespace-nowrap bg-black shadow-lg"
+                    >
+                      A top aligned tooltip.
+                    </span>
+                    <div class="w-3 h-3 rotate-45 bg-black -mt-2"></div>
+                  </div>
+                </span>
+              </div>
+
+              <div class="rate-wrapper">
+                <div class="progress-line">
+                  <div class="progress-fill"></div>
+                </div>
+                <div class="rate">
+                  <input
+                    type="radio"
+                    id="s1_q5_star10"
+                    name="s1_q5_rating"
+                    value="10"
+                  />
+                  <label for="s1_q5_star10" data-value="10"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q5_star9"
+                    name="s1_q5_rating"
+                    value="9"
+                  />
+                  <label for="s1_q5_star9" data-value="9"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q5_star8"
+                    name="s1_q5_rating"
+                    value="8"
+                  />
+                  <label for="s1_q5_star8" data-value="8"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q5_star7"
+                    name="s1_q5_rating"
+                    value="7"
+                  />
+                  <label for="s1_q5_star7" data-value="7"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q5_star6"
+                    name="s1_q5_rating"
+                    value="6"
+                  />
+                  <label for="s1_q5_star6" data-value="6"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q5_star5"
+                    name="s1_q5_rating"
+                    value="5"
+                  />
+                  <label for="s1_q5_star5" data-value="5"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q5_star4"
+                    name="s1_q5_rating"
+                    value="4"
+                  />
+                  <label for="s1_q5_star4" data-value="4"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q5_star3"
+                    name="s1_q5_rating"
+                    value="3"
+                  />
+                  <label for="s1_q5_star3" data-value="3"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q5_star2"
+                    name="s1_q5_rating"
+                    value="2"
+                  />
+                  <label for="s1_q5_star2" data-value="2"></label>
+
+                  <input
+                    type="radio"
+                    id="s1_q5_star1"
+                    name="s1_q5_rating"
+                    value="1"
+                  />
+                  <label for="s1_q5_star1" data-value="1"></label>
+                </div>
+              </div>
+
+              <input
+                type="text"
+                class="pat_input"
+                placeholder="Optional Comment..."
+              />
+            </div>
+          </div>
+
+          <div class="second_step hidden flex flex-col gap-12">
+            <div class="form-group question-block" data-question="2.1">
+              <div class="pat_label leading-relaxed text-sm">
+                1. [Staff Name] demonstrates integrity, fairness, and
+                professionalism in all leadership responsibilities.
+                <span class="relative inline-block align-text-bottom group">
+                  <img
+                    src="assets/icons/info.svg"
+                    alt="Info"
+                    class="inline w-4 h-4 cursor-pointer"
+                  />
+                  <div
+                    class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center"
+                  >
+                    <span
+                      class="relative z-10 p-2 text-xs leading-none text-white whitespace-nowrap bg-black shadow-lg"
+                    >
+                      A top aligned tooltip.
+                    </span>
+                    <div class="w-3 h-3 rotate-45 bg-black -mt-2"></div>
+                  </div>
+                </span>
+              </div>
+
+              <div class="rate-wrapper">
+                <div class="progress-line">
+                  <div class="progress-fill"></div>
+                </div>
+                <div class="rate">
+                  <input
+                    type="radio"
+                    id="s2_q1_star10"
+                    name="s2_q1_rating"
+                    value="10"
+                  />
+                  <label for="s2_q1_star10" data-value="10"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q1_star9"
+                    name="s2_q1_rating"
+                    value="9"
+                  />
+                  <label for="s2_q1_star9" data-value="9"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q1_star8"
+                    name="s2_q1_rating"
+                    value="8"
+                  />
+                  <label for="s2_q1_star8" data-value="8"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q1_star7"
+                    name="s2_q1_rating"
+                    value="7"
+                  />
+                  <label for="s2_q1_star7" data-value="7"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q1_star6"
+                    name="s2_q1_rating"
+                    value="6"
+                  />
+                  <label for="s2_q1_star6" data-value="6"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q1_star5"
+                    name="s2_q1_rating"
+                    value="5"
+                  />
+                  <label for="s2_q1_star5" data-value="5"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q1_star4"
+                    name="s2_q1_rating"
+                    value="4"
+                  />
+                  <label for="s2_q1_star4" data-value="4"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q1_star3"
+                    name="s2_q1_rating"
+                    value="3"
+                  />
+                  <label for="s2_q1_star3" data-value="3"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q1_star2"
+                    name="s2_q1_rating"
+                    value="2"
+                  />
+                  <label for="s2_q1_star2" data-value="2"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q1_star1"
+                    name="s2_q1_rating"
+                    value="1"
+                  />
+                  <label for="s2_q1_star1" data-value="1"></label>
+                </div>
+              </div>
+
+              <input
+                type="text"
+                class="pat_input"
+                placeholder="Optional Comment..."
+              />
+            </div>
+
+            <div class="form-group question-block" data-question="2.2">
+              <div class="pat_label leading-relaxed text-sm">
+                2. [Staff Name] sets a positive example for staff by modelling
+                ethical behaviour, respect, and professionalism.
+                <span class="relative inline-block align-text-bottom group">
+                  <img
+                    src="assets/icons/info.svg"
+                    alt="Info"
+                    class="inline w-4 h-4 cursor-pointer"
+                  />
+                  <div
+                    class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center"
+                  >
+                    <span
+                      class="relative z-10 p-2 text-xs leading-none text-white whitespace-nowrap bg-black shadow-lg"
+                    >
+                      A top aligned tooltip.
+                    </span>
+                    <div class="w-3 h-3 rotate-45 bg-black -mt-2"></div>
+                  </div>
+                </span>
+              </div>
+
+              <div class="rate-wrapper">
+                <div class="progress-line">
+                  <div class="progress-fill"></div>
+                </div>
+                <div class="rate">
+                  <input
+                    type="radio"
+                    id="s2_q2_star10"
+                    name="s2_q2_rating"
+                    value="10"
+                  />
+                  <label for="s2_q2_star10" data-value="10"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q2_star9"
+                    name="s2_q2_rating"
+                    value="9"
+                  />
+                  <label for="s2_q2_star9" data-value="9"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q2_star8"
+                    name="s2_q2_rating"
+                    value="8"
+                  />
+                  <label for="s2_q2_star8" data-value="8"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q2_star7"
+                    name="s2_q2_rating"
+                    value="7"
+                  />
+                  <label for="s2_q2_star7" data-value="7"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q2_star6"
+                    name="s2_q2_rating"
+                    value="6"
+                  />
+                  <label for="s2_q2_star6" data-value="6"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q2_star5"
+                    name="s2_q2_rating"
+                    value="5"
+                  />
+                  <label for="s2_q2_star5" data-value="5"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q2_star4"
+                    name="s2_q2_rating"
+                    value="4"
+                  />
+                  <label for="s2_q2_star4" data-value="4"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q2_star3"
+                    name="s2_q2_rating"
+                    value="3"
+                  />
+                  <label for="s2_q2_star3" data-value="3"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q2_star2"
+                    name="s2_q2_rating"
+                    value="2"
+                  />
+                  <label for="s2_q2_star2" data-value="2"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q2_star1"
+                    name="s2_q2_rating"
+                    value="1"
+                  />
+                  <label for="s2_q2_star1" data-value="1"></label>
+                </div>
+              </div>
+
+              <input
+                type="text"
+                class="pat_input"
+                placeholder="Optional Comment..."
+              />
+            </div>
+
+            <div class="form-group question-block" data-question="2.3">
+              <div class="pat_label leading-relaxed text-sm">
+                3. [Staff Name] handles conflicts and difficult situations with
+                diplomacy, fairness, and constructive problem-solving.
+                <span class="relative inline-block align-text-bottom group">
+                  <img
+                    src="assets/icons/info.svg"
+                    alt="Info"
+                    class="inline w-4 h-4 cursor-pointer"
+                  />
+                  <div
+                    class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center"
+                  >
+                    <span
+                      class="relative z-10 p-2 text-xs leading-none text-white whitespace-nowrap bg-black shadow-lg"
+                    >
+                      A top aligned tooltip.
+                    </span>
+                    <div class="w-3 h-3 rotate-45 bg-black -mt-2"></div>
+                  </div>
+                </span>
+              </div>
+
+              <div class="rate-wrapper">
+                <div class="progress-line">
+                  <div class="progress-fill"></div>
+                </div>
+                <div class="rate">
+                  <input
+                    type="radio"
+                    id="s2_q3_star10"
+                    name="s2_q3_rating"
+                    value="10"
+                  />
+                  <label for="s2_q3_star10" data-value="10"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q3_star9"
+                    name="s2_q3_rating"
+                    value="9"
+                  />
+                  <label for="s2_q3_star9" data-value="9"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q3_star8"
+                    name="s2_q3_rating"
+                    value="8"
+                  />
+                  <label for="s2_q3_star8" data-value="8"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q3_star7"
+                    name="s2_q3_rating"
+                    value="7"
+                  />
+                  <label for="s2_q3_star7" data-value="7"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q3_star6"
+                    name="s2_q3_rating"
+                    value="6"
+                  />
+                  <label for="s2_q3_star6" data-value="6"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q3_star5"
+                    name="s2_q3_rating"
+                    value="5"
+                  />
+                  <label for="s2_q3_star5" data-value="5"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q3_star4"
+                    name="s2_q3_rating"
+                    value="4"
+                  />
+                  <label for="s2_q3_star4" data-value="4"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q3_star3"
+                    name="s2_q3_rating"
+                    value="3"
+                  />
+                  <label for="s2_q3_star3" data-value="3"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q3_star2"
+                    name="s2_q3_rating"
+                    value="2"
+                  />
+                  <label for="s2_q3_star2" data-value="2"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q3_star1"
+                    name="s2_q3_rating"
+                    value="1"
+                  />
+                  <label for="s2_q3_star1" data-value="1"></label>
+                </div>
+              </div>
+
+              <input
+                type="text"
+                class="pat_input"
+                placeholder="Optional Comment..."
+              />
+            </div>
+
+            <div class="form-group question-block" data-question="2.4">
+              <div class="pat_label leading-relaxed text-sm">
+                4. [Staff Name] fosters a culture of mutual respect, open
+                communication, and teamwork among staff members.
+                <span class="relative inline-block align-text-bottom group">
+                  <img
+                    src="assets/icons/info.svg"
+                    alt="Info"
+                    class="inline w-4 h-4 cursor-pointer"
+                  />
+                  <div
+                    class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center"
+                  >
+                    <span
+                      class="relative z-10 p-2 text-xs leading-none text-white whitespace-nowrap bg-black shadow-lg"
+                    >
+                      A top aligned tooltip.
+                    </span>
+                    <div class="w-3 h-3 rotate-45 bg-black -mt-2"></div>
+                  </div>
+                </span>
+              </div>
+
+              <div class="rate-wrapper">
+                <div class="progress-line">
+                  <div class="progress-fill"></div>
+                </div>
+                <div class="rate">
+                  <input
+                    type="radio"
+                    id="s2_q4_star10"
+                    name="s2_q4_rating"
+                    value="10"
+                  />
+                  <label for="s2_q4_star10" data-value="10"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q4_star9"
+                    name="s2_q4_rating"
+                    value="9"
+                  />
+                  <label for="s2_q4_star9" data-value="9"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q4_star8"
+                    name="s2_q4_rating"
+                    value="8"
+                  />
+                  <label for="s2_q4_star8" data-value="8"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q4_star7"
+                    name="s2_q4_rating"
+                    value="7"
+                  />
+                  <label for="s2_q4_star7" data-value="7"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q4_star6"
+                    name="s2_q4_rating"
+                    value="6"
+                  />
+                  <label for="s2_q4_star6" data-value="6"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q4_star5"
+                    name="s2_q4_rating"
+                    value="5"
+                  />
+                  <label for="s2_q4_star5" data-value="5"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q4_star4"
+                    name="s2_q4_rating"
+                    value="4"
+                  />
+                  <label for="s2_q4_star4" data-value="4"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q4_star3"
+                    name="s2_q4_rating"
+                    value="3"
+                  />
+                  <label for="s2_q4_star3" data-value="3"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q4_star2"
+                    name="s2_q4_rating"
+                    value="2"
+                  />
+                  <label for="s2_q4_star2" data-value="2"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q4_star1"
+                    name="s2_q4_rating"
+                    value="1"
+                  />
+                  <label for="s2_q4_star1" data-value="1"></label>
+                </div>
+              </div>
+
+              <input
+                type="text"
+                class="pat_input"
+                placeholder="Optional Comment..."
+              />
+            </div>
+
+            <div class="form-group question-block" data-question="2.5">
+              <div class="pat_label leading-relaxed text-sm">
+                5. [Staff Name] ensures that all staff members feel supported,
+                valued, and heard in their professional roles.
+                <span class="relative inline-block align-text-bottom group">
+                  <img
+                    src="assets/icons/info.svg"
+                    alt="Info"
+                    class="inline w-4 h-4 cursor-pointer"
+                  />
+                  <div
+                    class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center"
+                  >
+                    <span
+                      class="relative z-10 p-2 text-xs leading-none text-white whitespace-nowrap bg-black shadow-lg"
+                    >
+                      A top aligned tooltip.
+                    </span>
+                    <div class="w-3 h-3 rotate-45 bg-black -mt-2"></div>
+                  </div>
+                </span>
+              </div>
+
+              <div class="rate-wrapper">
+                <div class="progress-line">
+                  <div class="progress-fill"></div>
+                </div>
+                <div class="rate">
+                  <input
+                    type="radio"
+                    id="s2_q5_star10"
+                    name="s2_q5_rating"
+                    value="10"
+                  />
+                  <label for="s2_q5_star10" data-value="10"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q5_star9"
+                    name="s2_q5_rating"
+                    value="9"
+                  />
+                  <label for="s2_q5_star9" data-value="9"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q5_star8"
+                    name="s2_q5_rating"
+                    value="8"
+                  />
+                  <label for="s2_q5_star8" data-value="8"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q5_star7"
+                    name="s2_q5_rating"
+                    value="7"
+                  />
+                  <label for="s2_q5_star7" data-value="7"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q5_star6"
+                    name="s2_q5_rating"
+                    value="6"
+                  />
+                  <label for="s2_q5_star6" data-value="6"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q5_star5"
+                    name="s2_q5_rating"
+                    value="5"
+                  />
+                  <label for="s2_q5_star5" data-value="5"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q5_star4"
+                    name="s2_q5_rating"
+                    value="4"
+                  />
+                  <label for="s2_q5_star4" data-value="4"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q5_star3"
+                    name="s2_q5_rating"
+                    value="3"
+                  />
+                  <label for="s2_q5_star3" data-value="3"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q5_star2"
+                    name="s2_q5_rating"
+                    value="2"
+                  />
+                  <label for="s2_q5_star2" data-value="2"></label>
+
+                  <input
+                    type="radio"
+                    id="s2_q5_star1"
+                    name="s2_q5_rating"
+                    value="1"
+                  />
+                  <label for="s2_q5_star1" data-value="1"></label>
+                </div>
+              </div>
+
+              <input
+                type="text"
+                class="pat_input"
+                placeholder="Optional Comment..."
+              />
+            </div>
+          </div>
+
+          <div class="third_step hidden flex flex-col gap-12">
+            <div class="form-group question-block" data-question="3.1">
+              <div class="pat_label leading-relaxed text-sm">
+                1. [Staff Name] attends worship regularly and is usually on
+                time.
+                <span class="relative inline-block align-text-bottom group">
+                  <img
+                    src="assets/icons/info.svg"
+                    alt="Info"
+                    class="inline w-4 h-4 cursor-pointer"
+                  />
+                  <div
+                    class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center"
+                  >
+                    <span
+                      class="relative z-10 p-2 text-xs leading-none text-white whitespace-nowrap bg-black shadow-lg"
+                    >
+                      A top aligned tooltip.
+                    </span>
+                    <div class="w-3 h-3 rotate-45 bg-black -mt-2"></div>
+                  </div>
+                </span>
+              </div>
+
+              <div class="rate-wrapper">
+                <div class="progress-line">
+                  <div class="progress-fill"></div>
+                </div>
+                <div class="rate">
+                  <input
+                    type="radio"
+                    id="s3_q1_star10"
+                    name="s3_q1_rating"
+                    value="10"
+                  />
+                  <label for="s3_q1_star10" data-value="10"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q1_star9"
+                    name="s3_q1_rating"
+                    value="9"
+                  />
+                  <label for="s3_q1_star9" data-value="9"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q1_star8"
+                    name="s3_q1_rating"
+                    value="8"
+                  />
+                  <label for="s3_q1_star8" data-value="8"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q1_star7"
+                    name="s3_q1_rating"
+                    value="7"
+                  />
+                  <label for="s3_q1_star7" data-value="7"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q1_star6"
+                    name="s3_q1_rating"
+                    value="6"
+                  />
+                  <label for="s3_q1_star6" data-value="6"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q1_star5"
+                    name="s3_q1_rating"
+                    value="5"
+                  />
+                  <label for="s3_q1_star5" data-value="5"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q1_star4"
+                    name="s3_q1_rating"
+                    value="4"
+                  />
+                  <label for="s3_q1_star4" data-value="4"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q1_star3"
+                    name="s3_q1_rating"
+                    value="3"
+                  />
+                  <label for="s3_q1_star3" data-value="3"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q1_star2"
+                    name="s3_q1_rating"
+                    value="2"
+                  />
+                  <label for="s3_q1_star2" data-value="2"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q1_star1"
+                    name="s3_q1_rating"
+                    value="1"
+                  />
+                  <label for="s3_q1_star1" data-value="1"></label>
+                </div>
+              </div>
+
+              <input
+                type="text"
+                class="pat_input"
+                placeholder="Optional Comment..."
+              />
+            </div>
+
+            <div class="form-group question-block" data-question="3.2">
+              <div class="pat_label leading-relaxed text-sm">
+                2. [Staff Name] supports the spiritual direction of the school
+                and can articulate our spiritual masterplan.
+                <span class="relative inline-block align-text-bottom group">
+                  <img
+                    src="assets/icons/info.svg"
+                    alt="Info"
+                    class="inline w-4 h-4 cursor-pointer"
+                  />
+                  <div
+                    class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center"
+                  >
+                    <span
+                      class="relative z-10 p-2 text-xs leading-none text-white whitespace-nowrap bg-black shadow-lg"
+                    >
+                      A top aligned tooltip.
+                    </span>
+                    <div class="w-3 h-3 rotate-45 bg-black -mt-2"></div>
+                  </div>
+                </span>
+              </div>
+
+              <div class="rate-wrapper">
+                <div class="progress-line">
+                  <div class="progress-fill"></div>
+                </div>
+                <div class="rate">
+                  <input
+                    type="radio"
+                    id="s3_q2_star10"
+                    name="s3_q2_rating"
+                    value="10"
+                  />
+                  <label for="s3_q2_star10" data-value="10"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q2_star9"
+                    name="s3_q2_rating"
+                    value="9"
+                  />
+                  <label for="s3_q2_star9" data-value="9"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q2_star8"
+                    name="s3_q2_rating"
+                    value="8"
+                  />
+                  <label for="s3_q2_star8" data-value="8"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q2_star7"
+                    name="s3_q2_rating"
+                    value="7"
+                  />
+                  <label for="s3_q2_star7" data-value="7"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q2_star6"
+                    name="s3_q2_rating"
+                    value="6"
+                  />
+                  <label for="s3_q2_star6" data-value="6"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q2_star5"
+                    name="s3_q2_rating"
+                    value="5"
+                  />
+                  <label for="s3_q2_star5" data-value="5"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q2_star4"
+                    name="s3_q2_rating"
+                    value="4"
+                  />
+                  <label for="s3_q2_star4" data-value="4"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q2_star3"
+                    name="s3_q2_rating"
+                    value="3"
+                  />
+                  <label for="s3_q2_star3" data-value="3"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q2_star2"
+                    name="s3_q2_rating"
+                    value="2"
+                  />
+                  <label for="s3_q2_star2" data-value="2"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q2_star1"
+                    name="s3_q2_rating"
+                    value="1"
+                  />
+                  <label for="s3_q2_star1" data-value="1"></label>
+                </div>
+              </div>
+
+              <input
+                type="text"
+                class="pat_input"
+                placeholder="Optional Comment..."
+              />
+            </div>
+
+            <div class="form-group question-block" data-question="3.3">
+              <div class="pat_label leading-relaxed text-sm">
+                3. [Staff Name] willingly shares with their colleagues when
+                rostered to lead staff worship.
+                <span class="relative inline-block align-text-bottom group">
+                  <img
+                    src="assets/icons/info.svg"
+                    alt="Info"
+                    class="inline w-4 h-4 cursor-pointer"
+                  />
+                  <div
+                    class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center"
+                  >
+                    <span
+                      class="relative z-10 p-2 text-xs leading-none text-white whitespace-nowrap bg-black shadow-lg"
+                    >
+                      A top aligned tooltip.
+                    </span>
+                    <div class="w-3 h-3 rotate-45 bg-black -mt-2"></div>
+                  </div>
+                </span>
+              </div>
+
+              <div class="rate-wrapper">
+                <div class="progress-line">
+                  <div class="progress-fill"></div>
+                </div>
+                <div class="rate">
+                  <input
+                    type="radio"
+                    id="s3_q3_star10"
+                    name="s3_q3_rating"
+                    value="10"
+                  />
+                  <label for="s3_q3_star10" data-value="10"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q3_star9"
+                    name="s3_q3_rating"
+                    value="9"
+                  />
+                  <label for="s3_q3_star9" data-value="9"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q3_star8"
+                    name="s3_q3_rating"
+                    value="8"
+                  />
+                  <label for="s3_q3_star8" data-value="8"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q3_star7"
+                    name="s3_q3_rating"
+                    value="7"
+                  />
+                  <label for="s3_q3_star7" data-value="7"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q3_star6"
+                    name="s3_q3_rating"
+                    value="6"
+                  />
+                  <label for="s3_q3_star6" data-value="6"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q3_star5"
+                    name="s3_q3_rating"
+                    value="5"
+                  />
+                  <label for="s3_q3_star5" data-value="5"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q3_star4"
+                    name="s3_q3_rating"
+                    value="4"
+                  />
+                  <label for="s3_q3_star4" data-value="4"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q3_star3"
+                    name="s3_q3_rating"
+                    value="3"
+                  />
+                  <label for="s3_q3_star3" data-value="3"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q3_star2"
+                    name="s3_q3_rating"
+                    value="2"
+                  />
+                  <label for="s3_q3_star2" data-value="2"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q3_star1"
+                    name="s3_q3_rating"
+                    value="1"
+                  />
+                  <label for="s3_q3_star1" data-value="1"></label>
+                </div>
+              </div>
+
+              <input
+                type="text"
+                class="pat_input"
+                placeholder="Optional Comment..."
+              />
+            </div>
+
+            <div class="form-group question-block" data-question="3.4">
+              <div class="pat_label leading-relaxed text-sm">
+                4. [Staff Name] takes advantage of teachable moments with
+                students for character development.
+                <span class="relative inline-block align-text-bottom group">
+                  <img
+                    src="assets/icons/info.svg"
+                    alt="Info"
+                    class="inline w-4 h-4 cursor-pointer"
+                  />
+                  <div
+                    class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center"
+                  >
+                    <span
+                      class="relative z-10 p-2 text-xs leading-none text-white whitespace-nowrap bg-black shadow-lg"
+                    >
+                      A top aligned tooltip.
+                    </span>
+                    <div class="w-3 h-3 rotate-45 bg-black -mt-2"></div>
+                  </div>
+                </span>
+              </div>
+
+              <div class="rate-wrapper">
+                <div class="progress-line">
+                  <div class="progress-fill"></div>
+                </div>
+                <div class="rate">
+                  <input
+                    type="radio"
+                    id="s3_q4_star10"
+                    name="s3_q4_rating"
+                    value="10"
+                  />
+                  <label for="s3_q4_star10" data-value="10"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q4_star9"
+                    name="s3_q4_rating"
+                    value="9"
+                  />
+                  <label for="s3_q4_star9" data-value="9"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q4_star8"
+                    name="s3_q4_rating"
+                    value="8"
+                  />
+                  <label for="s3_q4_star8" data-value="8"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q4_star7"
+                    name="s3_q4_rating"
+                    value="7"
+                  />
+                  <label for="s3_q4_star7" data-value="7"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q4_star6"
+                    name="s3_q4_rating"
+                    value="6"
+                  />
+                  <label for="s3_q4_star6" data-value="6"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q4_star5"
+                    name="s3_q4_rating"
+                    value="5"
+                  />
+                  <label for="s3_q4_star5" data-value="5"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q4_star4"
+                    name="s3_q4_rating"
+                    value="4"
+                  />
+                  <label for="s3_q4_star4" data-value="4"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q4_star3"
+                    name="s3_q4_rating"
+                    value="3"
+                  />
+                  <label for="s3_q4_star3" data-value="3"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q4_star2"
+                    name="s3_q4_rating"
+                    value="2"
+                  />
+                  <label for="s3_q4_star2" data-value="2"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q4_star1"
+                    name="s3_q4_rating"
+                    value="1"
+                  />
+                  <label for="s3_q4_star1" data-value="1"></label>
+                </div>
+              </div>
+
+              <input
+                type="text"
+                class="pat_input"
+                placeholder="Optional Comment..."
+              />
+            </div>
+
+            <div class="form-group question-block" data-question="3.5">
+              <div class="pat_label leading-relaxed text-sm">
+                5. [Staff Name] takes opportunities to share Jesus with
+                students.
+                <span class="relative inline-block align-text-bottom group">
+                  <img
+                    src="assets/icons/info.svg"
+                    alt="Info"
+                    class="inline w-4 h-4 cursor-pointer"
+                  />
+                  <div
+                    class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center"
+                  >
+                    <span
+                      class="relative z-10 p-2 text-xs leading-none text-white whitespace-nowrap bg-black shadow-lg"
+                    >
+                      A top aligned tooltip.
+                    </span>
+                    <div class="w-3 h-3 rotate-45 bg-black -mt-2"></div>
+                  </div>
+                </span>
+              </div>
+
+              <div class="rate-wrapper">
+                <div class="progress-line">
+                  <div class="progress-fill"></div>
+                </div>
+                <div class="rate">
+                  <input
+                    type="radio"
+                    id="s3_q5_star10"
+                    name="s3_q5_rating"
+                    value="10"
+                  />
+                  <label for="s3_q5_star10" data-value="10"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q5_star9"
+                    name="s3_q5_rating"
+                    value="9"
+                  />
+                  <label for="s3_q5_star9" data-value="9"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q5_star8"
+                    name="s3_q5_rating"
+                    value="8"
+                  />
+                  <label for="s3_q5_star8" data-value="8"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q5_star7"
+                    name="s3_q5_rating"
+                    value="7"
+                  />
+                  <label for="s3_q5_star7" data-value="7"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q5_star6"
+                    name="s3_q5_rating"
+                    value="6"
+                  />
+                  <label for="s3_q5_star6" data-value="6"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q5_star5"
+                    name="s3_q5_rating"
+                    value="5"
+                  />
+                  <label for="s3_q5_star5" data-value="5"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q5_star4"
+                    name="s3_q5_rating"
+                    value="4"
+                  />
+                  <label for="s3_q5_star4" data-value="4"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q5_star3"
+                    name="s3_q5_rating"
+                    value="3"
+                  />
+                  <label for="s3_q5_star3" data-value="3"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q5_star2"
+                    name="s3_q5_rating"
+                    value="2"
+                  />
+                  <label for="s3_q5_star2" data-value="2"></label>
+
+                  <input
+                    type="radio"
+                    id="s3_q5_star1"
+                    name="s3_q5_rating"
+                    value="1"
+                  />
+                  <label for="s3_q5_star1" data-value="1"></label>
+                </div>
+              </div>
+
+              <input
+                type="text"
+                class="pat_input"
+                placeholder="Optional Comment..."
+              />
+            </div>
+          </div>
+
+          <div class="step-buttons flex justify-between gap-4">
+            <button
+              type="button"
+              class="prev-step hidden bg-blue text-white px-6 py-2 rounded cursor-pointer"
+            >
+              Back
+            </button>
+            <button
+              type="button"
+              class="next-step bg-blue text-white px-6 py-2 rounded cursor-pointer"
+            >
+              Next
+            </button>
+            <button
+              type="submit"
+              class="submit-form hidden bg-blue text-white px-6 py-2 rounded cursor-pointer"
+            >
+              Submit
+            </button>
           </div>
         </form>
       </section>
     </main>
 
+    <!-- Rating JS -->
     <script>
-      const rateInputs = document.querySelectorAll(
-        '.pat_form .rate input[type="radio"]'
-      );
-      const progressLine = document.querySelector(".pat_form .progress-line");
-      const progressFill = document.querySelector(".pat_form .progress-fill");
-      const totalRatings = 10;
+      document.querySelectorAll(".rate-wrapper").forEach((wrapper) => {
+        const rateInputs = wrapper.querySelectorAll(
+          '.rate input[type="radio"]'
+        );
+        const progressFill = wrapper.querySelector(".progress-fill");
+        const progressLine = wrapper.querySelector(".pat_form .progress-line");
+        const totalRatings = 10;
 
-      rateInputs.forEach((input) => {
-        input.addEventListener("change", () => {
-          progressLine.classList.add("active");
-          const selectedValue = parseInt(input.value);
-          const percentagePerDot = 100 / (totalRatings - 1);
-          const percentage = (selectedValue - 1) * percentagePerDot;
-          progressFill.style.width = `calc(${percentage}% + 8px)`; // adjust `8px` to center
+        rateInputs.forEach((input) => {
+          input.addEventListener("change", () => {
+            progressLine.classList.add("active");
+            const selectedValue = parseInt(input.value);
+            const percentagePerDot = 100 / (totalRatings - 1);
+            const percentage = (selectedValue - 1) * percentagePerDot;
+            progressFill.style.width = `calc(${percentage}% + 8px)`; // center the progress
+          });
         });
       });
+    </script>
+
+    <!-- Multistep JS -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const steps = Array.from(
+          document.querySelectorAll(".first_step, .second_step, .third_step")
+        );
+        const asides = Array.from(
+          document.querySelectorAll(
+            ".first_step_aside, .second_step_aside, .third_step_aside"
+          )
+        );
+        const nextBtn = document.querySelector(".next-step");
+        const prevBtn = document.querySelector(".prev-step");
+        const submitBtn = document.querySelector(".submit-form");
+        const stepCount = document.querySelector(".step_count");
+        const stepIndicators = document.querySelectorAll(".steps .step");
+
+        let currentStep = 0;
+
+        function showStep() {
+          steps.forEach((step, index) => {
+            step.classList.toggle("hidden", index !== currentStep);
+          });
+          asides.forEach((aside, index) => {
+            aside.classList.toggle("hidden", index !== currentStep);
+          });
+
+          stepCount.textContent = `${currentStep + 1} of ${steps.length}`;
+
+          stepIndicators.forEach((el, i) => {
+            el.classList.remove("active", "completed");
+            if (i < currentStep) el.classList.add("completed");
+            else if (i === currentStep) el.classList.add("active");
+          });
+
+          prevBtn.classList.toggle("hidden", currentStep === 0);
+          nextBtn.classList.toggle("hidden", currentStep === steps.length - 1);
+          submitBtn.classList.toggle(
+            "hidden",
+            currentStep !== steps.length - 1
+          );
+        }
+
+        nextBtn.addEventListener("click", () => {
+          if (currentStep < steps.length - 1) {
+            currentStep++;
+            showStep();
+          }
+        });
+
+        prevBtn.addEventListener("click", () => {
+          if (currentStep > 0) {
+            currentStep--;
+            showStep();
+          }
+        });
+
+        // Initial render
+        showStep(currentStep);
+      });
+    </script>
+
+    <!-- Submit Logic -->
+    <script>
+      function getFormData() {
+        const results = [];
+
+        document.querySelectorAll(".question-block").forEach((block) => {
+          const questionId = block.getAttribute("data-question");
+
+          const selectedRatingInput = block.querySelector(
+            'input[type="radio"]:checked'
+          );
+          const rating = selectedRatingInput ? selectedRatingInput.value : null;
+
+          const commentInput = block.querySelector(".pat_input");
+          const comment = commentInput ? commentInput.value.trim() : "";
+
+          results.push({
+            question: questionId,
+            rating,
+            comment,
+          });
+        });
+
+        return results;
+      }
+
+      // Example: capture on form submit
+      document
+        .querySelector(".pat_form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault(); // Prevent actual form submission
+          const formData = getFormData();
+          console.log("Captured Data:", formData);
+
+          // Now you can:
+          // - Send it via AJAX
+          // - Store it locally
+          // - Show a summary to the user
+        });
     </script>
   </body>
 </html>
