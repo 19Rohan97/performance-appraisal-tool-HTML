@@ -4,6 +4,161 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Supervisor Questionnaire</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+        --color-border-1: #ebebeb;
+        --color-border-2: #e4e6e9;
+        --color-light: #f3f4f6;
+        --color-blue: #0d5cab;
+      }
+    </style>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <header
+      class="flex items-center justify-between px-6 py-3 bg-white border-b border-b-border-2"
+    >
+      <div class="logo">
+        <img src="assets/images/logo.svg" alt="Adventist Schools NNSW" />
+      </div>
+
+      <div class="nav_actions flex items-center gap-4">
+        <div
+          class="notifications-icon border rounded-full p-2 border-border-1 cursor-pointer"
+        >
+          <img src="assets/icons/bell.svg" alt="Notifications" />
+        </div>
+        <div class="user relative">
+          <img
+            src="assets/images/user.png"
+            alt="Username"
+            class="rounded-full"
+          />
+          <img
+            src="assets/icons/arrow-down.svg"
+            alt="More"
+            class="user-dropdown bg-[#0D5CAB] w-4 h-4 block border border-white rounded-full absolute right-[-4px] bottom-0"
+          />
+        </div>
+      </div>
+    </header>
+
+    <main class="w-full h-full min-h-[calc(100vh-61.67px)] relative">
+      <aside
+        class="py-10 px-9 w-full h-full max-w-[439px] bg-[url('./assets/images/CPP.png')] bg-cover bg-position-[25%_top] absolute top-0 left-0 before:content-[''] before:bg-linear-[182.3deg,#00000075_6%,#00000000_94%] before:w-full before:h-full before:absolute before:top-0 before:left-0"
+      >
+        <h2 class="mb-5 relative text-white">
+          Commitment to Professional Practice
+        </h2>
+        <p class="relative text-white">
+          This section evaluates the staff member&apos;s commitment to
+          professional excellence, adherence to ethical standards, and
+          dedication to continuous improvement in their role.
+        </p>
+      </aside>
+      <section
+        class="flex-1 py-10 px-[100px] bg-light w-full max-w-[calc(100%-439px)] ms-auto h-full min-h-[calc(100vh-61.67px)]"
+      >
+        <form class="pat_form">
+          <div class="steps">
+            <span class="step_count font-bold text-xl">2 of 3</span>
+            <span class="step step_1 completed"></span>
+            <span class="step step_2 active"></span>
+            <span class="step step_3"></span>
+          </div>
+
+          <div class="form-group">
+            <div class="pat_label leading-relaxed text-sm">
+              1. [Staff Name] demonstrates integrity, fairness, and
+              professionalism in all leadership responsibilities.
+              <span class="relative inline-block align-text-bottom group">
+                <img
+                  src="assets/icons/info.svg"
+                  alt="Info"
+                  class="inline w-4 h-4 cursor-pointer"
+                />
+                <div
+                  class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center"
+                >
+                  <span
+                    class="relative z-10 p-2 text-xs leading-none text-white whitespace-nowrap bg-black shadow-lg"
+                  >
+                    A top aligned tooltip.
+                  </span>
+                  <div class="w-3 h-3 rotate-45 bg-black -mt-2"></div>
+                </div>
+              </span>
+            </div>
+
+            <div class="rate-wrapper">
+              <div class="progress-line">
+                <div class="progress-fill"></div>
+              </div>
+              <div class="rate">
+                <input type="radio" id="star10" name="rating" value="10" />
+                <label for="star10" data-value="10"></label>
+
+                <input type="radio" id="star9" name="rating" value="9" />
+                <label for="star9" data-value="9"></label>
+
+                <input type="radio" id="star8" name="rating" value="8" />
+                <label for="star8" data-value="8"></label>
+
+                <input type="radio" id="star7" name="rating" value="7" />
+                <label for="star7" data-value="7"></label>
+
+                <input type="radio" id="star6" name="rating" value="6" />
+                <label for="star6" data-value="6"></label>
+
+                <input type="radio" id="star5" name="rating" value="5" />
+                <label for="star5" data-value="5"></label>
+
+                <input type="radio" id="star4" name="rating" value="4" />
+                <label for="star4" data-value="4"></label>
+
+                <input type="radio" id="star3" name="rating" value="3" />
+                <label for="star3" data-value="3"></label>
+
+                <input type="radio" id="star2" name="rating" value="2" />
+                <label for="star2" data-value="2"></label>
+
+                <input type="radio" id="star1" name="rating" value="1" />
+                <label for="star1" data-value="1"></label>
+              </div>
+            </div>
+
+            <input
+              type="text"
+              class="pat_input"
+              placeholder="Optional Comment..."
+            />
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script>
+      const rateInputs = document.querySelectorAll(
+        '.pat_form .rate input[type="radio"]'
+      );
+      const progressLine = document.querySelector(".pat_form .progress-line");
+      const progressFill = document.querySelector(".pat_form .progress-fill");
+      const totalRatings = 10;
+
+      rateInputs.forEach((input) => {
+        input.addEventListener("change", () => {
+          progressLine.classList.add("active");
+          const selectedValue = parseInt(input.value);
+          const percentagePerDot = 100 / (totalRatings - 1);
+          const percentage = (selectedValue - 1) * percentagePerDot;
+          progressFill.style.width = `calc(${percentage}% + 8px)`; // adjust `8px` to center
+        });
+      });
+    </script>
+  </body>
 </html>
