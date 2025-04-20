@@ -70,3 +70,15 @@ function renderSummary() {
   renderSection("CPB", grouped.CPB);
   renderSection("CM", grouped.CM);
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const appraisalSummarySubmit = document.querySelector(".btn_submit_summary");
+  const confirmationSkip = document.querySelector(".btn_skip");
+
+  appraisalSummarySubmit.addEventListener("click", () => {
+    document.getElementById("confirmation_modal").classList.remove("hidden");
+  });
+  confirmationSkip.addEventListener("click", () => {
+    location.reload();
+  });
+});
