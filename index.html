@@ -19,7 +19,7 @@
 
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body>
+  <body class="bg-[#F3F5F7]">
     <header
       class="flex items-center justify-between px-6 py-3 bg-white border-b border-b-border-2"
     >
@@ -48,7 +48,11 @@
       </div>
     </header>
 
-    <main class="w-full h-full min-h-[calc(100vh-61.67px)] relative">
+    <!-- Appraisal Form -->
+    <main
+      id="appraisal_form"
+      class="w-full h-full min-h-[calc(100vh-61.67px)] relative"
+    >
       <aside
         class="first_step_aside py-10 px-9 w-full h-full max-w-[439px] bg-[url('./assets/images/CPP.webp')] bg-cover bg-position-[37%_top] absolute top-0 left-0 before:content-[''] before:bg-linear-[182.3deg,#00000075_6%,#00000000_94%] before:w-full before:h-full before:absolute before:top-0 before:left-0"
       >
@@ -1882,6 +1886,70 @@
       </section>
     </main>
 
+    <!-- Appraisal Summary -->
+    <main
+      id="appraisal_summary"
+      class="w-full max-w-[956px] mx-auto bg-white p-12 rounded-2xl my-20"
+    >
+      <section>
+        <h2 class="text-center">Appraisal Summary</h2>
+        <p class="text-center mt-5 mb-14">
+          Please review your answers below and make any adjustments needed
+          before submitting.
+        </p>
+      </section>
+
+      <section>
+        <!-- Tabs -->
+        <div class="flex justify-center gap-3 mb-8" id="tabs">
+          <button
+            class="tab-btn px-[14px] py-[10px] rounded-lg font-medium text-[#262626] text-sm hover:text-blue hover:bg-[#FAFAFA] cursor-pointer"
+            data-tab="CPP"
+          >
+            Commitment to Professional Practice
+          </button>
+          <button
+            class="tab-btn px-[14px] py-[10px] rounded-lg font-medium text-[#262626] text-sm hover:text-blue hover:bg-[#FAFAFA] cursor-pointer"
+            data-tab="CPB"
+          >
+            Commitment to Professional Behaviour
+          </button>
+          <button
+            class="tab-btn px-[14px] py-[10px] rounded-lg font-medium text-[#262626] text-sm hover:text-blue hover:bg-[#FAFAFA] cursor-pointer"
+            data-tab="CM"
+          >
+            Commitment to Mission
+          </button>
+        </div>
+
+        <!-- Tab Content -->
+        <div id="tabContents">
+          <div class="tab-content flex flex-col gap-12" id="CPP">
+            <p>This is the content of CPP.</p>
+          </div>
+          <div class="tab-content hidden flex flex-col gap-12" id="CPB">
+            <p>This is the content of CPB.</p>
+          </div>
+          <div class="tab-content hidden flex flex-col gap-12" id="CM">
+            <p>This is the content of CM.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-16 flex justify-end items-center gap-6">
+        <button
+          class="btn_edit text-blue hover:text-white px-14 py-3 bg-[#EFF6FF] hover:bg-blue border-2 border-blue rounded-md cursor-pointer font-semibold transition-all duration-500"
+        >
+          Edit
+        </button>
+        <button
+          class="btn_submit_summary text-white hover:text-blue px-14 py-3 hover:bg-[#EFF6FF] bg-blue border-2 border-blue rounded-md cursor-pointer font-semibold transition-all duration-500"
+        >
+          Submit
+        </button>
+      </section>
+    </main>
+
     <!-- Rating JS -->
     <script>
       document.querySelectorAll(".rate-wrapper").forEach((wrapper) => {
@@ -1889,7 +1957,7 @@
           '.rate input[type="radio"]'
         );
         const progressFill = wrapper.querySelector(".progress-fill");
-        const progressLine = wrapper.querySelector(".pat_form .progress-line");
+        const progressLine = wrapper.querySelector(".progress-line");
         const totalRatings = 10;
 
         rateInputs.forEach((input) => {
@@ -1923,6 +1991,9 @@
         const stepIndicators = document.querySelectorAll(".steps .step");
 
         let currentStep = 0;
+
+        document.getElementById("appraisal_summary").classList.add("hidden");
+        // document.getElementById("appraisal_form").classList.remove("hidden");
 
         // Function for Validation
         function validateStep(stepIndex) {
@@ -2034,7 +2105,9 @@
               : null;
 
             const commentInput = block.querySelector(".pat_input");
-            const comment = commentInput ? commentInput.value.trim() : "";
+            const comment = commentInput
+              ? commentInput.value.trim().replace(/\s+/g, " ")
+              : "";
 
             results.push({
               question: questionId,
@@ -2046,11 +2119,178 @@
 
           console.log("Captured Data:", results);
           localStorage.setItem("patFormResponses", JSON.stringify(results));
+
+          renderSummary();
+
+          document
+            .getElementById("appraisal_summary")
+            .classList.remove("hidden");
+
+          document.getElementById("appraisal_form").classList.add("hidden");
         });
 
         // Initial render
         showStep(currentStep);
       });
+    </script>
+
+    <!-- Tab JS -->
+    <script>
+      const tabs = document.querySelectorAll(".tab-btn");
+      const contents = document.querySelectorAll(".tab-content");
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          const target = tab.getAttribute("data-tab");
+
+          // Remove active styles from all tabs
+          tabs.forEach((t) => t.classList.remove("bg-[#FAFAFA]", "text-blue"));
+          // Hide all content
+          contents.forEach((c) => c.classList.add("hidden"));
+
+          // Activate selected tab and content
+          tab.classList.add("bg-[#FAFAFA]", "text-blue");
+          document.getElementById(target).classList.remove("hidden");
+        });
+      });
+
+      // Activate the first tab by default
+      tabs[0].click();
+    </script>
+
+    <!-- Summary JS -->
+    <script>
+      function renderSummary() {
+        const results =
+          JSON.parse(localStorage.getItem("patFormResponses")) || [];
+
+        const grouped = {
+          CPP: [],
+          CPB: [],
+          CM: [],
+        };
+
+        results.forEach((item) => {
+          if (item.question?.startsWith("1.")) grouped.CPP.push(item);
+          else if (item.question?.startsWith("2.")) grouped.CPB.push(item);
+          else if (item.question?.startsWith("3.")) grouped.CM.push(item);
+        });
+
+        function renderSection(sectionId, data) {
+          const container = document.getElementById(sectionId);
+          container.innerHTML = ""; // Clear old content
+
+          if (data.length === 0) {
+            container.innerHTML = "<p>No responses yet.</p>";
+            return;
+          }
+
+          data.forEach((item, index) => {
+            const block = document.createElement("div");
+            block.className = "form-group question-block";
+
+            block.innerHTML = `
+        <h3 class="pat_label leading-relaxed text-sm">${item.questionText}</h3>
+      `;
+
+            const ratingWrapper = generateRateWrapper(item.rating);
+            block.appendChild(ratingWrapper);
+
+            if (item.comment) {
+              const commentEl = document.createElement("p");
+              commentEl.className =
+                "text-base text-[#5B5B5B] p-4 rounded-lg border border-[#CCCCCC] drop-shadow-xs bg-white";
+              commentEl.textContent = item.comment;
+              block.appendChild(commentEl);
+            }
+
+            container.appendChild(block);
+          });
+        }
+
+        function generateRateWrapper(ratingValue) {
+          const totalRatings = 10;
+          const percentage = ((ratingValue - 1) / (totalRatings - 1)) * 100;
+
+          const wrapper = document.createElement("div");
+          wrapper.className = "rate-result";
+
+          wrapper.innerHTML = `
+      <div class="progress-line">
+        <div class="progress-fill" style="width: calc(${percentage}% + 8px);"></div>
+      </div>
+      <div class="rate-values">
+        ${[...Array(10)]
+          .map((_, i) => {
+            const val = 1 + i;
+            return `
+              <span class="rate-value ${ratingValue > i ? "active" : ""} ${
+              ratingValue == val ? "selected" : ""
+            }" data-value="${val}"></span>
+            `;
+          })
+          .join("")}
+      </div>
+    `;
+
+          return wrapper;
+        }
+
+        renderSection("CPP", grouped.CPP);
+        renderSection("CPB", grouped.CPB);
+        renderSection("CM", grouped.CM);
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        renderSummary();
+      });
+    </script>
+
+    <!-- Edit Button -->
+    <script>
+      document
+        .querySelector("#appraisal_summary .btn_edit")
+        .addEventListener("click", () => {
+          document.getElementById("appraisal_summary").classList.add("hidden");
+          document.getElementById("appraisal_form").classList.remove("hidden");
+
+          const savedData =
+            JSON.parse(localStorage.getItem("patFormResponses")) || [];
+
+          savedData.forEach((item) => {
+            // Set the rating
+            const ratingInput = document.querySelector(
+              `input[name="${getRatingName(item.question)}"][value="${
+                item.rating
+              }"]`
+            );
+            if (ratingInput) {
+              ratingInput.checked = true;
+              ratingInput.dispatchEvent(new Event("change")); // trigger progress fill
+            }
+
+            // Set the comment
+            const block = document.querySelector(
+              `.question-block[data-question="${item.question}"]`
+            );
+            if (block) {
+              const commentInput = block.querySelector("input.pat_input");
+              if (commentInput) {
+                commentInput.value = item.comment;
+              }
+            }
+          });
+
+          // Optional: Reset to the first step
+          currentStep = 0;
+          showStep();
+        });
+
+      // Helper to map question like 1.1 to name like s1_q1_rating
+      function getRatingName(questionId) {
+        const [section, q] = questionId.split(".");
+        return `s${section}_q${q}_rating`;
+      }
     </script>
   </body>
 </html>
