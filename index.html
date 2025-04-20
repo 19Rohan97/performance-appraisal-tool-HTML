@@ -2144,12 +2144,14 @@
           const target = tab.getAttribute("data-tab");
 
           // Remove active styles from all tabs
-          tabs.forEach((t) => t.classList.remove("bg-[#FAFAFA]", "text-blue"));
+          tabs.forEach((t) =>
+            t.classList.remove("bg-[#FAFAFA]", "text-blue", "selected-tab")
+          );
           // Hide all content
           contents.forEach((c) => c.classList.add("hidden"));
 
           // Activate selected tab and content
-          tab.classList.add("bg-[#FAFAFA]", "text-blue");
+          tab.classList.add("bg-[#FAFAFA]", "text-blue", "selected-tab");
           document.getElementById(target).classList.remove("hidden");
         });
       });
@@ -2281,14 +2283,25 @@
             }
           });
 
-          // Optional: Reset to the first step
-          currentStep = 0;
+          // Get current active tab from button
+          const activeTab = document.querySelector(".tab-btn.selected-tab");
+          let stepIndex = 0;
+
+          if (activeTab?.dataset.tab === "CPB") stepIndex = 1;
+          else if (activeTab?.dataset.tab === "CM") stepIndex = 2;
+
+          currentStep = stepIndex;
           showStep();
         });
 
       // Helper to map question like 1.1 to name like s1_q1_rating
       function getRatingName(questionId) {
-        const [section, q] = questionId.split(".");
+        if (!questionId || typeof questionId !== "string") return "";
+
+        const parts = questionId.split(".");
+        if (parts.length !== 2) return "";
+
+        const [section, q] = parts;
         return `s${section}_q${q}_rating`;
       }
     </script>
